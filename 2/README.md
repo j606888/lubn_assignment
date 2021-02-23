@@ -14,8 +14,8 @@
 
 `psql -U postgres`
 
-4. 將 table.sql 內的內容複製貼上即可！
+4. 將 database.sql 內的內容複製貼上即可！
 
 ### 說明
 
-* primary key 我都是使用整數 id，所以廠房ID、感測器ID、感應器ID 我都取名為 code
+* primary key 是使用整數 id，所以廠房ID、感測器ID、感應器ID 則是取名為 code

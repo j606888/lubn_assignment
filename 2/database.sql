@@ -2,7 +2,7 @@ CREATE DATABASE lubn_assignment_2;
 \c lubn_assignment_2;
 
 CREATE TABLE factory(
-  id SERIAL,
+  id SERIAL PRIMARY KEY,
   code VARCHAR(255) NOT NULL UNIQUE,
   name VARCHAR(255) NOT NULL,
   location TEXT,
@@ -15,16 +15,16 @@ CREATE TABLE factory(
 );
 
 CREATE TABLE device(
-  id SERIAL,
+  id SERIAL PRIMARY KEY,
   code VARCHAR(255) NOT NULL UNIQUE,
   factory_code VARCHAR(255) NOT NULL,
   category VARCHAR(255) NOT NULL,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  created_at TIMESTAMPTZ NOT NULL default NOW(),
   updated_at TIMESTAMPTZ
 );
 
 CREATE TABLE sensor_data(
-  id SERIAL,
+  id SERIAL PRIMARY KEY,
   device_code VARCHAR(255) NOT NULL,
   sensed_at TIMESTAMPTZ NOT NULL,
   sense_value FLOAT NOT NULL,
