@@ -28,7 +28,7 @@ CREATE TABLE sensor_data(
   device_code VARCHAR(255) NOT NULL,
   sensed_at TIMESTAMPTZ NOT NULL,
   sense_value FLOAT NOT NULL,
-  created_at TIMESTAMPTZ default NOW()
+  created_at TIMESTAMPTZ NOT NULL default NOW()
 );
 
 CREATE OR REPLACE FUNCTION update_updated_at_column()
